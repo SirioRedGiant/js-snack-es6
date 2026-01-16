@@ -69,4 +69,54 @@ console.log(lessWeightBike, "e lei");
 
 console.log(`The lighter bike is: ${lessWeightBike.name}`);
 
+/**
+*!    SNAKE 2
+*     Creare un array di oggetti di squadre di calcio.
+      Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
+      Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
+      Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”.
+      Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+ */
+
+const footballClubs = [
+  {
+  squadName : "Milano",
+  points: 0,
+  takenFauls: 0,
+  },
+  {
+  squadName : "Casalpusterlengo",
+  points: 0,
+  takenFauls: 0,
+  },
+  {
+  squadName : "Fombio",
+  points: 0,
+  takenFauls: 0,
+  },
+  {
+  squadName : "Sondrio",
+  points: 0,
+  takenFauls: 0,
+  },
+  {
+  squadName : "Genova",
+  points: 0,
+  takenFauls: 0,
+  }
+];
+
+/**
+ *todo    Funzione che dato un valore max ed uno min restituisce un numero casuale
+ * @param {number} min 
+ * @param {number} max 
+ * @returns {number} 
+ */
+function randomGenerator(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+
+
+
 
