@@ -1,3 +1,4 @@
+
 /*
 !   Snack 1
     Creare un array di oggetti:
@@ -47,7 +48,7 @@ const racingBikes = [
     weight: "6.8",
   },
 ];
-
+/*
 //note definisco una variabile con valore infinito ed una variabile vuota per la bici più leggera
 let min = Infinity;
 let lessWeightBike = null;
@@ -68,7 +69,7 @@ for (let i = 0; i < racingBikes.length; i++) {
 console.log(lessWeightBike, "e lei");
 
 console.log(`The lighter bike is: ${lessWeightBike.name}`);
-
+*/
 /**
 *!    SNAKE 2
 *     Creare un array di oggetti di squadre di calcio.
@@ -80,43 +81,49 @@ console.log(`The lighter bike is: ${lessWeightBike.name}`);
 
 const footballClubs = [
   {
-  squadName : "Milano",
-  points: 0,
-  takenFauls: 0,
+    squadName: "Milano",
+    points: 0,
+    takenFauls: 0,
   },
   {
-  squadName : "Casalpusterlengo",
-  points: 0,
-  takenFauls: 0,
+    squadName: "Casalpusterlengo",
+    points: 0,
+    takenFauls: 0,
   },
   {
-  squadName : "Fombio",
-  points: 0,
-  takenFauls: 0,
+    squadName: "Fombio",
+    points: 0,
+    takenFauls: 0,
   },
   {
-  squadName : "Sondrio",
-  points: 0,
-  takenFauls: 0,
+    squadName: "Sondrio",
+    points: 0,
+    takenFauls: 0,
   },
   {
-  squadName : "Genova",
-  points: 0,
-  takenFauls: 0,
-  }
+    squadName: "Genova",
+    points: 0,
+    takenFauls: 0,
+  },
 ];
 
 /**
  *todo    Funzione che dato un valore max ed uno min restituisce un numero casuale
- * @param {number} min 
- * @param {number} max 
- * @returns {number} 
+ * @param {number} min
+ * @param {number} max
+ * @returns {number}
  */
 function randomGenerator(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+console.table(footballClubs);
 
 
+//note     usare la funzione definita sopra per cambiare i valori di points e takeFauls
+for (let i = 0; i < footballClubs.length; i++) {
+  footballClubs[i].points = randomGenerator(0, 24); //max è 24 perchè numero massimo di punti
+  footballClubs[i].takenFauls = randomGenerator(0, 160); // tenendo conto che i falli possono variare ma in un caso estremo circa 20 a partita 
+}
 
-
+console.table(footballClubs)
