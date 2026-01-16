@@ -1,4 +1,3 @@
-
 /*
 !   Snack 1
     Creare un array di oggetti:
@@ -108,7 +107,7 @@ const footballClubs = [
 ];
 
 /**
- *todo    Funzione che dato un valore max ed uno min restituisce un numero casuale
+ *^    Funzione che dato un valore max ed uno min restituisce un numero casuale
  * @param {number} min
  * @param {number} max
  * @returns {number}
@@ -119,11 +118,31 @@ function randomGenerator(min, max) {
 
 console.table(footballClubs);
 
-
 //note     usare la funzione definita sopra per cambiare i valori di points e takeFauls
 for (let i = 0; i < footballClubs.length; i++) {
   footballClubs[i].points = randomGenerator(0, 24); //max è 24 perchè numero massimo di punti
-  footballClubs[i].takenFauls = randomGenerator(0, 160); // tenendo conto che i falli possono variare ma in un caso estremo circa 20 a partita 
+  footballClubs[i].takenFauls = randomGenerator(0, 160); // tenendo conto che i falli possono variare ma in un caso estremo circa 20 a partita
 }
 
-console.table(footballClubs)
+console.table(footballClubs);
+
+//todo    Creare un nuovo array i cui elementi contengono solo le chiavi/valori di squadName e takenFauls
+
+let arrTemporary = [];
+const foulsWon = [];
+
+for (let i = 0; i < footballClubs.length; i++) {
+  console.log(arrTemporary);
+  arrTemporary = {
+    squadName: footballClubs[i].squadName,
+    takenFauls: footballClubs[i].takenFauls,
+  };
+  foulsWon.push(arrTemporary);
+  console.log(`array temporaneo: ${arrTemporary}`);
+}
+
+
+console.log("**************************")
+console.log("=======  DEBUGGING =======")
+
+console.table(foulsWon);
